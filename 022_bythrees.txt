@@ -1,0 +1,36 @@
+//Cameron Prince
+//Original: 12/2/12
+//Modified: 12/2/12
+//Purpose: count up by threes to 12, then have it reset
+
+#include <iostream>
+using namespace std;
+
+int numvar = 0;
+int bythrees();
+void reset();
+
+int main() {
+	for(int i=0; i < 5; i++)
+	cout << bythrees() << " "; //starts "bythrees"
+	cout << "\n";
+	reset(); //starts "reset"
+	for(int i=0; i < 5; i++)
+
+	cout << bythrees() << " "; //starts "bythrees" again
+	cout << "\n";
+
+	system ("pause");
+	return 0;
+}
+int bythrees() //the "bythrees" method
+{
+	int x;
+	x = numvar;
+	numvar += 3; //adds 3 to the number
+	return x;
+}
+void reset() //the "reset" method
+{
+	numvar = 0; //sets number to 0
+}

@@ -1,0 +1,86 @@
+//Cameron Prince
+//original: 12/19/12
+//modified: 12/19/12
+//Purpose:create a mad lib and have the user input the words
+//mad lib
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+string askText(string prompt);
+int askNumber(string prompt);
+void tellStory(string name, string noun, int number, string bodyPart, string verb);
+
+int main()
+{
+
+	char again = 'y';
+	while (again == 'y')
+			{
+
+	cout << "Welcome to Mad Lib.\n\n";
+	cout << "Answer the following questions to help create a new story.\n";
+
+	string name = askText("Enter a name: "); //asks for a name
+	string noun = askText("Enter a plural noun: "); //asks for a plural noun
+	int number = askNumber("Enter a number: "); //asks for a number
+	string bodyPart = askText("Enter a body part: "); //asks for a body part
+	string verb = askText("Enter a verb: "); //asks for a verb
+
+	tellStory(name, noun, number, bodyPart, verb); //story function
+
+
+
+	cout << "\nDo you want to play again? (y/n): "; //play again
+	cin >> again;
+			}
+	system ("pause");
+	return 0;
+}
+
+string askText(string prompt)  //function to input strings
+{
+	string text;
+	cout << prompt;
+	cin >> text;
+	return text;
+}
+
+int askNumber(string prompt)   //function to input the number
+{
+	int num;
+	cout << prompt;
+	cin >> num;
+	return num;
+}
+
+void tellStory(string name, string noun, int number, string bodyPart, string verb) // function for story
+{
+	cout << "\nHere's your story:\n";
+	cout << "The famous explorer ";
+	cout << name;
+	cout << " had nearly given up a life-long quest to find\n";
+	cout << "The lost City of ";
+	cout << noun;
+	cout << " When one day, the ";
+	cout << noun;
+	cout << " found the explorer.\n";
+	cout << "Surrounded by ";
+	cout << number;
+	cout << " " << noun;
+	cout << ", a tear came to ";
+	cout << name << "'s ";
+	cout << bodyPart << ".\n";
+	cout << "After all this time, the quest was finally over. ";
+	cout << "And then, the ";
+	cout << noun << "\n";
+	cout << "promptly devoured ";
+	cout << name << ". ";
+	cout << "The moral of the story? Be careful what you ";
+	cout << verb;
+	cout << " for.";
+}
+
+
+

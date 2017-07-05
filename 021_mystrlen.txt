@@ -1,0 +1,27 @@
+//Cameron Prince
+//Original: 12/2/12
+//Modified: 12/2/12
+//Purpose: Create a custom version of strlen
+
+
+#include <iostream>
+using namespace std;
+
+
+int mystrlen(char *str);
+int main()
+{
+	cout << "Length of Game Over is ";
+	cout << mystrlen("Game Over");
+	cout << " characters";
+	cout << "\n";
+	system ("pause");
+	return 0;
+}
+
+int mystrlen(char *str)
+{
+	int i;
+	for(i=0; str[i]; i++) ; // finds the end of the string
+	return i;
+}

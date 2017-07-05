@@ -1,0 +1,47 @@
+//Cameron Prince
+//original 10/25/12
+//modified 10/25/12
+//purpose: using if/then statements
+// Score Rater
+// Demonstrates the if statement
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	if (true) // If true then display "This is always displayed."
+	{
+	cout << "This is always displayed. \n\n";
+	}
+	if (false) // states what happens when false
+	{
+	cout << "this is never displayed. \n\n";
+	}
+
+	int score = 1000; //sets the initial score
+
+	if (score) //states what happens if you got a score
+	{
+	cout << "At least you didn't score zero. \n\n";
+	}
+
+	if (score >= 250) //states what happens if you scored 250 or higher
+	{
+	cout << "You scored 250 or more. Decent. \n\n";
+	}
+
+	if (score >= 500) //states what happens if you scored 500 or higher
+	{
+		cout << "You scored 500 or more. Nice. \n\n";
+
+		if (score >= 1000) //states what happens if you scored 1000 or higher
+		{
+		cout << "You scored 1000 or more. Impressive! \n";
+		}
+	}
+	system ("pause");
+	return 0;
+}
+
+//I learned how to use if/then statements for multiple values

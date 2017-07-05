@@ -1,0 +1,50 @@
+//Cameron Prince
+//original: 10/30/12
+//modified: 11/1/12
+//purpose: making menu choices that repeat
+// Menu Chooser + play again
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{	
+	char again = 'y'; // defines again
+	while (again == 'y')
+			{
+		
+	cout << "Difficulty Levels \n\n"; // states the levels
+	cout << "1 - Easy \n";
+	cout << "2 - Normal \n";
+	cout << "3 - Hard \n\n";
+
+	int choice;
+	cout << "Choice: "; // defines and asks for the input of the choice
+	cin >> choice;
+
+	switch (choice)
+	{
+	case 1:
+		cout << "You picked Easy. \n"; // states what happens with each case
+		break;
+	case 2:
+		cout << "You picked Normal. \n";
+		break;
+	case 3:
+		cout << "You picked Hard. \n";
+		break;
+	default:
+		cout << "You made an illegal choice. \n";
+	}
+			
+		cout << "\nDo you want to play again? (y/n): "; // askes user if he/she wants to play again
+		cin >> again;
+			}
+	
+	system ("pause");
+	return 0;
+}
+
+	// I learned how to apply the play again loop on to
+	// programs I build

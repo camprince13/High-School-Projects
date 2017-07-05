@@ -1,0 +1,66 @@
+//Cameron Prince
+//original: 11/15/12
+//modified: 11/15/12
+//Purpose: demonstrates vectors (pg118)
+//Hero's Inventory 2.0
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+
+	char again = 'y';
+	while (again == 'y')
+			{
+	vector<string> inventory;
+	inventory.push_back( "sword" );
+	inventory.push_back( "armor" );
+	inventory.push_back( "shield" );
+
+	cout << "You have " << inventory.size() << " items.\n";
+
+	cout << "\nYour items:\n";
+	for (unsigned int i = 0; i < inventory.size(); ++i)
+	{
+		cout << inventory[i] << endl;
+	}
+
+	cout << "\nYou trade your sword for a battle axe.";
+	inventory[0] = "battle axe";
+	cout << "\nYour items: \n";
+	for (unsigned int i = 0; i < inventory.size(); ++i)
+	{
+		cout << inventory[i] << endl;
+	}
+
+	cout << "\nThe item name '" << inventory[0] << "' has ";
+	cout << inventory[0].size() << " letters in it. \n";
+
+	cout << "\nYour shield is destroyed in a fierce battle.";
+	inventory.pop_back();
+	cout << "\nYour items: \n";
+	for (unsigned int i = 0; i < inventory.size(); ++i)
+	{
+		cout << inventory[i] << endl;
+	}
+
+	cout << "\nYou were robbed of all of you possessions by a thief.";
+	if (inventory.empty())
+	{
+		cout << "\nYou have nothing.\n";
+	{
+	else
+	{
+		cout << "\nYou have at least one item. \n";
+	}
+
+	cout << "\nDo you want to play again? (y/n): "; 
+	cin >> again;
+			}
+	system ("pause");
+	return 0;
+}

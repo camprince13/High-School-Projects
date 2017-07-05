@@ -1,0 +1,28 @@
+//Cameron Prince
+//original 10/25/12
+//modified 10/26/12
+//purpose: Demonstrates an else clause on page 46
+//Score rater 2.0
+//Demonstrates an else clause
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int score;
+	cout << "Enter your score: ";
+	cin >> score;
+
+	if (score >= 1000) // states what happens when score is greater than 1000
+	{
+		cout << "you scored 1000 or more. Impressive! \n";
+	}
+	else  // states what happens when score is less than 1000
+	{
+		cout << "You scored less than 1000. \n";
+	}
+
+	system ("pause");
+	return 0;
+}

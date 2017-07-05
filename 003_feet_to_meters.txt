@@ -1,0 +1,24 @@
+/*
+
+	Project 1-1
+
+	Convert feet to meters
+	MUST LAUNCH USING CTRL F5
+
+*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	double f; // holds the length in feet
+	double m; // holds the conversion to meters
+
+cout << "Enter the length in feet: ";
+cin >> f; // read the number of feet
+
+m = f / 3.28; // conversion to meters
+cout << f << " feet is " << m << " meters.";
+
+return 0;
+}

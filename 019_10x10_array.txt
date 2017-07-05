@@ -1,0 +1,35 @@
+//Cameron Prince
+//original: 11/27/12
+//modified: 11/28/12
+//Purpose: Populate a 10x10 array using a formula
+//Thanksgiving Project (my number is 6)
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float round4(float cheese) //starting the rounding method
+{
+	cheese += 0.00005;
+
+	float cheese2 = cheese*10000; //next 3 lines: multiply by 10000, cuts off the remaining decimal, then divides by 10000
+	int cheese3 = floor (cheese2); // so the number is rounded to 4 places, cheese represents the number that will be rounded
+	return (float)cheese3/10000.0;
+}
+int main()
+{
+	int x; //initialize x
+	x = 6; //set value of x
+	int z, y; //initialize z and y
+	float array1 [10] [10]; //initialize the array
+
+	for(int y = 0; y < 10; y++) { //describes the different values of y
+		for( z = 0; z < 10; z++) { //describes the different values of z
+			array1 [y] [z] = round4(((float)x*((float)y+1)/((float)z+1))); //the equation for the array with the rounding method
+			cout << array1 [y] [z] << ' '; //shows the array
+		}
+		cout << '\n';
+	}
+	system ("pause");
+	return 0;
+}

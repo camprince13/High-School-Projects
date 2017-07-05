@@ -1,0 +1,35 @@
+//Cameron Prince
+//original: 11/1/12
+//modified: 11/1/12
+//purpose: Demonstrates break and continue statements
+//Finicky counter (pg 59)
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char again = 'y';
+	while (again == 'y')
+
+	int count = 0;
+	while (true)
+	{
+		count += 1;
+		
+		//end loop if count is greater than 10
+		if (count > 10)
+		{
+			break;
+		}
+		// skip the number 5
+		if (count == 5)
+		{
+			continue;
+		}
+
+		cout << count << endl;
+	}
+	cout << "\nDo you want to play again? (y/n): ";
+	cin >> again;

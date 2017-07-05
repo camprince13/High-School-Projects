@@ -1,0 +1,40 @@
+//Cameron Prince
+//original: 11/29/12
+//modified: 11/30/12
+//Purpose: make a program that computes the
+//   length of the hypotenuse of a triangle
+//Hypot
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void hypot();
+
+int main()
+{
+
+	hypot(); //calls hypot
+
+	cout << "\n";
+
+	system ("pause");
+	return 0;
+}
+
+void hypot() //the hypot method
+{
+	double a; //initializes a, b, and c. Allows decimals
+	double b;
+	double c;
+
+	cout << "Enter the first side: ";
+	cin >> a;
+	cout << "\n";
+	cout << "Enter the second side: ";
+	cin >> b;
+	cout << "\n";
+	cout << "The length of the hypotenuse is: ";
+	c = sqrt((a * a) + (b * b));
+	cout << c;
+}

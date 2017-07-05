@@ -1,0 +1,67 @@
+//Cameron Prince
+//original: 12/4/12
+//modified: 12/4/12
+//Purpose:ask square or square root
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void square1();
+void squareroot1();
+
+int x;
+int z;
+
+int main()
+{
+
+	char again = 'y';
+	while (again == 'y')
+			{
+
+	cout <<"\nSquare or square root?\n";
+	int a;
+
+	cout << "Choose 1 to square your number. Choose 2 to square root your number. ";
+
+	cin >> a;
+
+	if( a == 1) square1(); //choice 1
+	if( a == 2) squareroot1(); //choice 2
+
+	cout << "\nDo you want to play again? (y/n): "; //play again
+	cin >> again;
+			}
+	system ("pause");
+	return 0;
+}
+
+void square1() //square function
+{
+	cout << "Enter your number: ";
+	cin >> x;
+	
+	z = x;
+
+	cout << "The square of you number is: ";
+	int c;
+	c = x * z; //square equation
+	cout << c;
+	cout << " \n";
+}
+
+void squareroot1() //squareroot function
+{
+	cout << "Enter your number: ";
+	cin >> x;
+	
+	z = x;
+
+	cout << "The square of you number is: ";
+	double c;
+	c = sqrt((float)z); //squareroot equation
+	cout << c;
+	cout << " \n";
+}
